@@ -1,6 +1,6 @@
 {
   "name": "@andreasgalster/fsn-yesno-button",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "fsn-yesno-button is a set of basic shared styles, similar to bootstrap",
   "main": "fsn-yesno-button.html",
   "scripts": {
