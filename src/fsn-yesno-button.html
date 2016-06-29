@@ -1,6 +1,6 @@
-<dom-module id="fsn-yesno-button">
+<dom-module id='fsn-yesno-button'>
   <template>
-    <style include="houseme-styles"></style>
+    <style include='houseme-styles'></style>
     <style>
       :host {
         margin-bottom: 20px;
@@ -31,7 +31,7 @@
       }
 
       span:after {
-        content: "";
+        content: '';
         display: block;
         position: absolute;
         width: 4px;
@@ -112,13 +112,11 @@
     <section>
       <h2><content></content></h2>
       <div>
-        <input type="radio" id="yes" checked$={{checked}} />
-        <input type="radio" id="no" checked$={{!checked}} />
-        <div class="switch">
+        <input type='radio' id='yes' checked$={{checked}}>
+        <input type='radio' id='no' checked$={{!checked}}>
+        <div class='switch'>
           <label class='yes' on-tap='setChecked'>Yes</label>
           <label class='no' on-tap='clearChecked'>No</label>
-          <!-- <label on-tap='setChecked' for="yes">Yes</label>
-          <label on-tap='ClearChecked' for="no">No</label> -->
           <span></span>
         </div>
       </div>
@@ -129,31 +127,32 @@
 
 
 <script>
-  require('@polymer/polymer/polymer.html');
-  require('@polymer/iron-flex-layout/iron-flex-layout.html');
 
-  require('@andreasgalster/fsn-boilerplate/dist/fsn-boilerplate.html');
+require('@polymer/polymer/polymer.html');
+require('@polymer/iron-flex-layout/iron-flex-layout.html');
 
-  Polymer({
-    is: 'fsn-yesno-button',
-    properties: {
+require('@andreasgalster/fsn-boilerplate/dist/fsn-boilerplate.html');
 
-      checked: {
-        type: Boolean,
-        value: true,
-        notify: true
-      }
+Polymer({
+  is: 'fsn-yesno-button',
+  properties: {
 
-    },
+    checked: {
+      type: Boolean,
+      value: true,
+      notify: true
+    }
 
-    setChecked: function() {
-      this.checked = true;
-    },
+  },
 
-    clearChecked: function() {
-      this.checked = false;
-    },
+  setChecked: function() {
+    this.checked = true;
+  },
 
-  });
+  clearChecked: function() {
+    this.checked = false;
+  }
+
+});
 
 </script>
